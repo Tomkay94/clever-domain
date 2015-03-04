@@ -13,3 +13,6 @@ When a user inputs a phrase, CleverDomain searches through a list of all possibl
 
  - `mynewdomain` returns `mynewdoma.in`
 
+### Try it
+
+http://thanasi.me/clever-domain/
