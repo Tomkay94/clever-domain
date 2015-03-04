@@ -4,7 +4,7 @@ function checkDomains() {
   /* Get the input string */
   var userString = document.getElementById("domainInput").value;
 
-  /* sample list of domain suffixes */
+  /* Sample list of domain suffixes */
   var data = [
     'io',
     'biz',
@@ -26,7 +26,7 @@ function checkDomains() {
 
   /* Check if a domain was found. */
   if (typeof domainPrefix === 'undefined') {
-    message = 'No clever domains were found for that text :(';
+    message = 'No clever domains were found for \'' + userString + '\' :(';
   }
 
   else {
