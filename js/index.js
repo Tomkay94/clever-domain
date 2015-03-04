@@ -16,7 +16,8 @@ function checkDomains() {
   for(var ending = 0; ending < data.length; ++ending) {
     var domain = data[ending];
 
-    if(userString.slice(userString.length - domain.length, userString.length) === domain) {
+    if(userString.slice(userString.length - domain.length, userString.length) === domain
+      && userString.length > 2) {
       var domainPrefix = userString.slice(0, userString.lastIndexOf(domain[0]) );
       var pickedDomain = domainPrefix + '.' + domain;
       break;
