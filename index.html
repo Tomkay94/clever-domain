@@ -2,13 +2,53 @@
 <html>
   <head>
     <script src="js/index.js"></script>
-    <title>Clever Domains</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <title>Clever Domain</title>
   </head>
   <body>
-    <article>
-      <input id="domainInput"/>
-      <button onClick="checkDomains()">Find me a clever domain!</button>
-      <span id="domainOutput" style="display: none;">yo</span>
-    </article>
+
+    <section class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+
+          <div class="inner cover">
+            <h1 class="cover-heading">Clever Domain</h1>
+
+            <p class="lead">Ever wanted to find out if a phrase has
+              a creative domain? Then you've come to the right place.
+
+              <br /><br />
+
+              Clever Domain finds if your product or phrase has a creative domain waiting for you.
+              Just type the word or phrase you want to try into the search bar to find out.
+
+              <br /><br />
+
+              <article>
+                <input id="domainInput"/>
+                <button id="domainSearch" onClick="checkDomains()">Find me a clever domain!</button>
+              </article>
+
+            </p>
+
+            <p class="lead">
+              <a id="domainOutput" class="btn btn-lg btn-info" href="#">Learn more</a>
+            </p>
+
+          </div>
+
+          <!-- Footer -->
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Made with <i class="fa fa-heart"></i> by Thanasi Karachotzitis ~ <a href=
+              "http://thanasi.me/">My Github</a></p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
   </body>
 </html>
