@@ -18,7 +18,7 @@ function getTLDs(callback) {
       $('tr', 'table').each(function() {
         var foundTLD = $(this).children().first().text().toString();
         if (foundTLD.indexOf('.') == 0) {
-          TLDs.push(foundTLD);
+          TLDs.push(foundTLD.replace('.',''));
         };
       });
     };
