@@ -3,6 +3,14 @@ function checkDomains() {
 
   /* Get the input string */
   var userString = document.getElementById("domainInput").value;
+
+  /* The input was empty */
+  if (userString.length == 0) {
+    message = 'That was empty! Please input a word or phrase.';
+    setDivMessage(message, false);
+    return;
+  }
+
   const MIN_DOMAIN_LENGTH = 2;
 
   /* Scraped list of possible TLDs */
@@ -26,20 +34,27 @@ function checkDomains() {
   /* Check if a domain was found. */
   if (typeof domainPrefix === 'undefined') {
     message = 'No clever domains were found for \'' + userString + '\' :(';
+    foundDomain = false;
   }
 
   else {
-    message = 'Congrats! We\'ve found a domain for you: ' + pickedDomain;
+    message = 'Congrats! We\'ve found a domain with a clever suffix for you: ' + pickedDomain;
+    foundDomain = true;
   }
 
-  setDivMessage(message);
+  setDivMessage(message, foundDomain);
   return;
 
 };
 
-/* Set the message to the output div. */
-function setDivMessage(message) {
+/* Set the message to the output div.
+   Style the div based on domainWasFound. */
+function setDivMessage(message, domainWasFound) {
   var outputDiv = document.getElementById("domainOutput");
   outputDiv.textContent = message;
   outputDiv.style.display = "block";
-};
+
+  /* Reset the class name to the new name */
+  outputDiv.className = "";
+  outputDiv.className = (domainWasFound === true) ? 'btn btn-success' : 'btn btn-warning';
+}

@@ -4,6 +4,7 @@
     <script src="js/index.js"></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
     <title>Clever Domain</title>
   </head>
   <body>
@@ -29,7 +30,9 @@
 
               <article>
                 <input id="domainInput"/>
-                <button id="domainSearch" onClick="checkDomains()">Find me a clever domain!</button>
+                <button type="button" class="btn btn-info" id="domainSearch" onClick="checkDomains()">
+                  <i class="fa fa-search"></i>
+                </button>
               </article>
 
             </p>
