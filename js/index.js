@@ -1,17 +1,16 @@
 /* Returns a clever domain for the given text, if one exists. */
 function checkDomains() {
+  const MIN_DOMAIN_LENGTH = 2;
 
   /* Get the input string */
   var userString = document.getElementById("domainInput").value;
 
   /* The input was empty */
-  if (userString.length == 0) {
-    message = 'That was empty! Please input a word or phrase.';
+  if (userString.length < MIN_DOMAIN_LENGTH) {
+    message = 'That input was too short! Try something longer than ' + MIN_DOMAIN_LENGTH + ' characters.';
     setDivMessage(message, false);
     return;
   }
-
-  const MIN_DOMAIN_LENGTH = 2;
 
   /* Scraped list of possible TLDs */
   var data = [
@@ -51,7 +50,7 @@ function checkDomains() {
    Style the div based on domainWasFound. */
 function setDivMessage(message, domainWasFound) {
   var outputDiv = document.getElementById("domainOutput");
-  outputDiv.textContent = message;
+  outputDiv.textContent   = message;
   outputDiv.style.display = "block";
 
   /* Reset the class name to the new name */
