@@ -227,8 +227,8 @@ body {
 }
 
 /* Custom */
-.noStyleLink,
-.noStyleLink:hover {
+.no-style-link,
+.no-style-link:hover {
   color: #fff !important;
   text-decoration: none;
   border-bottom: 1px dotted #fff;
