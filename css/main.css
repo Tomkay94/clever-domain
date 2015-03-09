@@ -225,3 +225,11 @@ body {
 .search-query:focus + button {
     z-index: 3;
 }
+
+/* Custom */
+.noStyleLink,
+.noStyleLink:hover {
+  color: #fff !important;
+  text-decoration: none;
+  border-bottom: 1px dotted #fff;
+}
